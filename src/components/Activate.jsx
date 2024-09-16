@@ -13,7 +13,12 @@ const Activate = () => {
     const activateAccount = async () => {
       try {
         await axios.get(`https://flightbooking-5p50.onrender.com/api/auth/activate/${token}`);
-        toast.success('Account activated! You can now log in.');
+        toast.success('Account activated! You can now log in.', {
+          autoClose: 3000, // Duration in milliseconds
+          onClose: () => {
+            window.location.href = '/login';
+          }
+      });
       } catch (err) {
         setError(err.response?.data?.message || 'Activation failed');
         toast.error(err.response?.data?.message);
