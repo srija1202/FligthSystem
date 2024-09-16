@@ -16,8 +16,7 @@ const BookingHistory = () => {
       const userId = localStorage.getItem('userId');
       if (!token) return;
       try {
-        const response = await axios.get('https://flightbooking-5p50.onrender.com/api/bookings/getBookings', 
-          userId,
+        const response = await axios.get(`https://flightbooking-5p50.onrender.com/api/bookings/getBookings/${userId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setBookings(response.data);
