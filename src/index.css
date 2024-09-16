@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-4 py-2 font-semibold text-white bg-blue-500 rounded-lg shadow-md;
+}
+
+.btn-primary {
+  @apply bg-blue-600;
+}
+
+.btn-danger {
+  @apply bg-red-600;
+}
+
+.card {
+  @apply bg-white p-6 rounded-lg shadow-md;
+}
+
+/* Add this to your global CSS file */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto; /* Allow scrolling */
+}
+
+body {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c0fe);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Keyframes for background gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
