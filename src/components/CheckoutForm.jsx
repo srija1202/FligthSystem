@@ -29,7 +29,7 @@ const CheckoutForm = ({ amount, bookingDetails }) => {
     try {
       // Confirm the card payment with Stripe
       const { data: { clientSecret } } = await axios.post(
-        'http://localhost:5000/api/bookings/create-payment-intent',
+        'https://flightbooking-5p50.onrender.com/api/bookings/create-payment-intent',
         { amount, userId: bookingDetails.userId },
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -50,7 +50,7 @@ const CheckoutForm = ({ amount, bookingDetails }) => {
       } else if (paymentIntent.status === 'succeeded') {
         // Send payment confirmation to the backend
         const response = await axios.post(
-          'http://localhost:5000/api/bookings/createBookings',
+          'https://flightbooking-5p50.onrender.com/api/bookings/createBookings',
           {
               ...bookingDetails,
               paymentIntentId: paymentIntent.id,

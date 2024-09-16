@@ -37,7 +37,7 @@ const FlightSearch = () => {
     if (!token) return;
 
     try {
-      const response = await axios.get('http://localhost:5000/api/flights', {
+      const response = await axios.get('https://flightbooking-5p50.onrender.com/api/flights', {
         headers: { Authorization: `Bearer ${token}` },
         params: { origin: departure, destination: arrival, departureDate },
       });

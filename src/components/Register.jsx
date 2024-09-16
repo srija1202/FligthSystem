@@ -24,7 +24,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', data);
+      await axios.post('https://flightbooking-5p50.onrender.com/api/auth/register', data);
       toast.success('Registration successful! Please check your email to activate your account.');
     } catch (error) {
       toast.error(error.response?.data?.message || 'Registration failed');

@@ -15,7 +15,7 @@ const BookingHistory = () => {
       const token = localStorage.getItem('token');
       if (!token) return;
       try {
-        const response = await axios.get('http://localhost:5000/api/bookings/getBookings', 
+        const response = await axios.get('https://flightbooking-5p50.onrender.com/api/bookings/getBookings', 
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setBookings(response.data);
@@ -37,7 +37,7 @@ const BookingHistory = () => {
 
   const handleCancelBooking = async (bookingId) => {
     try {
-      await axios.post('http://localhost:5000/api/bookings/cancelBooking', { bookingId });
+      await axios.post('https://flightbooking-5p50.onrender.com/api/bookings/cancelBooking', { bookingId });
       toast.success('Booking cancelled. Refund will be processed within 7 business days.');
     } catch (error) {
       toast.error(error.response.data.message);

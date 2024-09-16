@@ -20,7 +20,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', data);
+      const response = await axios.post('https://flightbooking-5p50.onrender.com/api/auth/login', data);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('userId',response.data.userId);
       toast.success('Login successful!');

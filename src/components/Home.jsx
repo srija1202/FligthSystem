@@ -3,10 +3,11 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css'
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 min-h-screen glass">
+    <div className="bg-gray-100 min-h-screen">
       {/* Header */}
       <header className="bg-blue-600 text-white py-6">
         <Container>
@@ -14,9 +15,6 @@ const Home = () => {
             <Col md={6}>
               <h1 className="text-4xl font-bold">Flight Booking and Reservation System</h1>
               <p className="mt-2 text-lg">Find and book flights easily with our comprehensive flight booking system.</p>
-            </Col>
-            <Col md={6} className="text-center">
-              <img src="/images/plane.svg" alt="Airplane" className="mx-auto w-3/4 md:w-1/2" />
             </Col>
           </Row>
         </Container>

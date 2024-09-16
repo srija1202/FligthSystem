@@ -75,7 +75,7 @@ Follow these steps to get the project up and running on your local machine:
    npm start
    ```
 
-   The server should now be running on `http://localhost:3000`.
+   The server should now be running on `https://leafy-haupia-3bcd35.netlify.app/`.
 
 ## 🧪 Testing
 

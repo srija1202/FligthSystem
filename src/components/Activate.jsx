@@ -12,7 +12,7 @@ const Activate = () => {
   useEffect(() => {
     const activateAccount = async () => {
       try {
-        await axios.get(`http://localhost:5000/api/auth/activate/${token}`);
+        await axios.get(`https://flightbooking-5p50.onrender.com/api/auth/activate/${token}`);
         toast.success('Account activated! You can now log in.');
       } catch (err) {
         setError(err.response?.data?.message || 'Activation failed');
